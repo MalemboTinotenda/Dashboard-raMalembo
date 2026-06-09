@@ -4,11 +4,18 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime, timedelta
 
-# ----- CONFIG (loaded from Streamlit secrets) -----
+# ----- CONFIG (loaded from Streamlit secrets) -----# Use string lookups, not the direct URLs
 SUPABASE_URL = st.secrets["https://efvzdizdtvqigkxornss.supabase.co/rest/v1/"]
 SUPABASE_KEY = st.secrets["yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmdnpkaXpkdHZxaWdreG9ybnNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NzMyMzEsImV4cCI6MjA5NjE0OTIzMX0.AsNuGTnpM-26M15jXkSxI4oSGwPWurqHtQDfMmWOWfg"]
+"]
 
+# Now initialize your client using those variables
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+#SUPABASE_URL = st.secrets["https://efvzdizdtvqigkxornss.supabase.co/rest/v1/"]
+#SUPABASE_KEY = st.secrets["yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmdnpkaXpkdHZxaWdreG9ybnNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NzMyMzEsImV4cCI6MjA5NjE0OTIzMX0.AsNuGTnpM-26M15jXkSxI4oSGwPWurqHtQDfMmWOWfg"]
+
+#supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 st.set_page_config(page_title="MT5 Dashboard", layout="wide")
 st.title("📊 MT5 Trading Dashboard (Cloud)")
