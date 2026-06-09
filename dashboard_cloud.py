@@ -16,8 +16,8 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 #supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-st.set_page_config(page_title="MT5 Dashboard", layout="wide")
-st.title("📊 MT5 Trading Dashboard (Cloud)")
+st.set_page_config(page_title=" Dashboard RaLembos ", layout="wide")
+st.title("📊 Trading Dashboard RaLemby ")
 
 # Date filter for closed trades
 st.sidebar.header("Settings")
